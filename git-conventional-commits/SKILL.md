@@ -23,7 +23,13 @@ When triggered, follow these steps:
     -   Identify the **scope** (e.g., module name, file name).
     -   Select a relevant **emoji** using `references/emojis.md`.
 
-3.  **Generate Message**:
+3.  **Determine Language**:
+    -   Check if the user explicitly requested a specific language (e.g., "in Chinese", "用中文").
+    -   If not specified, detect the language of the user's prompt.
+    -   Set the target language for the commit message (Subject, Body, Footer) to match the user's language or request.
+    -   Note: The `<type>` (feat, fix, etc.) should always remain in English as per Conventional Commits standard.
+
+4.  **Generate Message**:
     -   Construct the commit message using the following format:
         ```
         <type>(<scope>): <emoji> <subject>
@@ -36,16 +42,16 @@ When triggered, follow these steps:
         -   `<type>`: Must be one of the types in `references/types.md`.
         -   `(<scope>)`: Optional but recommended.
         -   `<emoji>`: Select from `references/emojis.md`.
-        -   `<subject>`: Imperative, present tense (e.g., "add feature" not "added feature").
+        -   `<subject>`: Imperative, present tense. **MUST be in the determined target language.**
     -   **Body** (Optional):
         -   Use for non-trivial changes.
         -   Use bullet points (`- `) for multiple changes.
-        -   Explain *what* and *why*.
+        -   Explain *what* and *why*. **MUST be in the determined target language.**
     -   **Footer** (Optional):
         -   Reference issues (e.g., `Closes #123`).
-        -   Mention breaking changes (`BREAKING CHANGE: ...`).
+        -   Mention breaking changes (`BREAKING CHANGE: ...`). **Description MUST be in the determined target language.**
 
-4.  **Review & Output**:
+5.  **Review & Output**:
     -   Present the generated commit message to the user for review.
     -   (Optional) You can run `python scripts/validate.py "<message>"` to verify the format before presenting.
     -   Ask the user if they want to proceed with the commit (`git commit -m "..."`).
