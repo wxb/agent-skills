@@ -86,6 +86,16 @@ Closes #42
 docs(readme): 📝 Update installation instructions
 ```
 
+### Chinese Example
+**Input**: 用户请求生成中文提交信息，或者用户用中文描述了更改：在 `auth.py` 中添加了登录功能。
+**Output**:
+```
+feat(auth): ✨ 添加用户登录功能
+
+- 在 `auth.py` 中实现 `login` 函数
+- 更新 `User` 模型以支持会话令牌
+```
+
 ## References
 
 -   [Commit Types](references/types.md)
