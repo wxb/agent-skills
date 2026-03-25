@@ -1,6 +1,6 @@
 ---
 name: git-conventional-commits
-description: Generates a git commit message following the Conventional Commits specification by analyzing staged changes. Use this skill when the user wants to commit code, generate a commit message, or standardize a commit.
+description: Generates a git commit message following the Conventional Commits specification by analyzing staged changes. Make sure to use this skill IMMEDIATELY whenever the user wants to commit code, generate a commit message, standardize a commit, or mentions phrases related to committing code in English, Chinese, or any other language (e.g., "commit this", "commit changes"), even if they don't explicitly mention "conventional commits" or "skill".
 ---
 
 # Git Conventional Commits Skill
